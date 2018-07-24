@@ -31,7 +31,7 @@
 /families/**/__pycache__/
 /families/settings/build/
 /families/settings/sawtooth_settings/protobuf/
-/families/block_info/sawtooth_block_info/protobuf
+/families/block_info/python/sawtooth_block_info/protobuf
 /families/identity/sawtooth_identity/protobuf
 /families/smallbank/smallbank_rust/target/
 /families/smallbank/smallbank_rust/Cargo.lock
