@@ -1,6 +1,4 @@
-#!/bin/bash
-
-# Copyright 2017 Intel Corporation
+# Copyright 2016 Intel Corporation
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,27 +12,3 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ------------------------------------------------------------------------------
-
-import os
-import sys
-import sysconfig
-
-build_str = "lib.{}-{}.{}".format(
-    sysconfig.get_platform(),
-    sys.version_info.major, sys.version_info.minor)
-
-sys.path.insert(0, os.path.join(
-    os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
-    'sdk', 'python'))
-sys.path.insert(0, os.path.join(
-    os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
-    'families', 'block_info', 'python'))
-
-from sawtooth_block_info.processor.main import main
-
-if [ -e $bin ]
-then
-    $bin $*
-else
-    echo "Please build block_info first with 'build_all'"
-fi
